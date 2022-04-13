@@ -1,0 +1,463 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+     min-height: 100%;
+     min-width: 100%;
+     font-family: 'Roboto', sans-serif;
+}
+
+ul{
+	list-style: none;
+}
+
+.nav{
+	display: flex;
+	flex-direction:  row;
+	justify-content: space-between;
+	align-content: center;
+	width: 100%;
+	padding: 1rem 1rem;
+	text-align: center;
+}
+
+.nav i span{
+	padding-left: 10px;
+}
+
+#menuToggle {
+  opacity: 0;
+  display: none;
+}
+
+#menuToggle:checked + .menuBtn > span {
+  transform: rotate(45deg);
+}
+
+#menuToggle:checked + .menuBtn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menuToggle:checked + .menuBtn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menuToggle:checked ~ .menuBox {
+  right: 0 !important;
+}
+
+.menuBtn {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menuBtn > span,
+.menuBtn > span::before,
+.menuBtn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+
+.menuBtn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menuBtn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menuBox {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  background-color: #f1b5b8;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+
+.menuItem {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+h1{
+	background-color: #f1b5b8;
+	color: white;
+	text-transform: uppercase;
+	font-size: 42px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+h3{
+	text-align: center;
+	padding: 10% 0;
+}
+
+img{
+	width: 100%;
+	border-radius: 50%;
+}
+
+#aboutUs, #doodles, #puppies, #interestForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 300px;
+	height: 100%;
+	padding: 2rem 2rem;
+	text-align: justify;
+}
+
+#aboutUs p{
+	margin-bottom: 10%;
+	max-width: 500px;
+	font-family: sans-serif;
+}
+
+#aboutUs h1, #puppies h1{
+	padding: 10px 30px;
+}
+
+
+
+/*Our Doodles Section*/
+#doodles{
+	background-color: #f1b5b8;;
+	color: white;
+	font-family: sans-serif;
+}
+
+#doodles img{
+	width: 100%;
+	height: 100%;
+	border:  1px solid white;
+	padding: 0px;
+}
+
+#doodles p{
+	margin: 10% 0px 15% 0px;
+	line-height: 30px;
+	font-style: italic;
+}
+
+
+/*Puppies Section*/
+
+.background{
+	background-color: #f7ebe9;
+}
+
+#puppies img{
+	border-radius: 0px;
+	width: 100%;
+	padding: 5%;
+}
+
+#puppies .containerflex{
+	text-align: center;
+}
+
+h5{
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 14px;
+	padding: 5% 0;
+}
+
+.generalInfo{
+	background-color: #f1b5b8;
+	color: white;
+	border-radius: 25px;
+}
+
+.generalInfo h1{
+	font-size: 36px;
+	margin: 10% 0;
+}
+.generalInfo ul{
+	padding-right: 5%;
+	text-align: left;
+}
+
+.generalInfo li{
+	padding-bottom: 10%;
+}
+
+/*Interest Form Section*/
+#interestForm{
+	background-color: #f1b5b8;
+	text-align: left;
+}
+
+input, textarea{
+	min-width: 100%;
+	margin: 2% 0 10% 0;
+	padding: 2% 0 2% 2%;
+	border: 1px solid white;
+}
+
+textarea{
+	min-height: 100px;
+}
+
+#interestForm button{
+	border-color: white;
+	padding: 2% 5%;
+}
+
+/*Footer*/
+
+.fa-facebook{
+	color: #4267B2;
+}
+
+.fa-twitter{
+	color: #1DA1F2;
+}
+.fa-instagram{
+	color: #fb3958;
+}
+
+footer{
+	text-align: center;
+	padding: 2rem 2rem;
+	max-height: 200px;
+}
+
+footer ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0;
+}
+
+footer ul li{
+	width: 33%;
+}
+
+footer p{
+	padding: 10% 0px;
+}
+
+/*Image slide show*/
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides, .mySlides2 {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.grid{
+	display: none;
+}
+
+
+/*Screen breaks*/
+@media	only screen and (max-width:  320px){
+	#aboutUs, #doodles, #puppies, #interestForm, footer {
+		padding: 1rem 1rem;
+	}
+}
+
+@media only screen and (max-width: 375px){
+
+
+	.nav{
+		padding: 1rem .5rem;
+		font-size: 16px;
+	}
+
+	.menuBtn{
+		top: 26px;
+		height: 24px;
+		width: 24px;
+	}
+}
+
+@media only screen and (min-width:  375px){
+	footer{
+		
+		font-size: 12px;
+		padding: .5rem;
+	}
+
+	footer .row{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.socials{
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+	}
+
+	footer p{
+		padding: 0px 5%;
+	}
+
+	footer .col-3{
+		width: 33%;
+	}
+
+	.containerflex{
+		margin-bottom: 10%;
+	}
+
+	.rowflex{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.col{
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+	}
+
+	.flip{
+		flex-direction: row-reverse;
+	}
+}
+
+@media only screen and (min-width: 425px){
+	.prev, .next, .mySlides, .mySlides2{
+		display: none !important; 
+	}
+
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-gap: 1rem;
+	}
+
+	.pic1{
+		grid-area: 1 / 1 / 4 / 4;	
+	}
+
+	.pic2{
+		grid-area: 3 / 4 / 4 / 5;
+	}
+
+	.pic3{
+		grid-area: 1 / 4 / 3 / 6;
+	}
+
+}
+
+@media only screen and (min-width: 768px){
+
+	.nav{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem .5rem;
+	}
+	.menuBtn{
+		display: none;
+		transition: none;
+	}
+
+	.menuBox{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0px;
+		position: initial;
+		box-shadow: none;
+		background-color: white;
+		min-width: 400px;
+		justify-content: flex-end;
+	}
+
+	.menuBox li{
+		width: 50%;
+	}
+
+	.menuItem{
+		font-weight: 750;
+		font-size: 14px;
+		padding: 0% 5%;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+
+	.nav{
+		font-size: 24px;
+		padding: 1rem 1rem;
+	}
+
+	.menuItem{
+		font-size: 18px;
+	}
+
+	.menuBox li{
+		width: 75%;
+
+	}
+
+	.menuBox{
+		min-width: 550px;
+	}
+
+}
+
