@@ -9,6 +9,20 @@ html, body {
      font-family: 'Roboto', sans-serif;
 }
 
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(assets/pawPrint1.png);
+	background-size: 100%;
+	background-repeat: repeat;
+	background-position: center;	
+}
+
+.col{
+	background-color: white;
+}
+
 ul{
 	list-style: none;
 }
@@ -21,6 +35,8 @@ ul{
 	width: 100%;
 	padding: 1rem 1rem;
 	text-align: center;
+	font-size: 14px;
+
 }
 
 .nav i span{
@@ -105,10 +121,10 @@ ul{
 }
 
 h1{
-	background-color: #f1b5b8;
+	background-color: #d4cec8;
 	color: white;
 	text-transform: uppercase;
-	font-size: 42px;
+	font-size: 38px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 	font-weight: 700;
 	text-align: center;
@@ -125,6 +141,10 @@ img{
 	border-radius: 50%;
 }
 
+p{
+	font-size: 18px;
+}
+
 #aboutUs, #doodles, #puppies, #interestForm{
 	display: flex;
 	flex-direction: column;
@@ -134,11 +154,16 @@ img{
 	height: 100%;
 	padding: 2rem 2rem;
 	text-align: justify;
+	width: 100%;
+}
+
+#aboutUs{
+	max-width: 768px;
 }
 
 #aboutUs p{
 	margin-bottom: 10%;
-	max-width: 500px;
+	max-width: 650px;
 	font-family: sans-serif;
 }
 
@@ -146,33 +171,50 @@ img{
 	padding: 10px 30px;
 }
 
+#aboutUs img{
+	max-width: 300px;
+	margin: 2% 0;
+}
 
+.aboutUsRight{
+	/*background-color: #f7ebe9;*/
+	border-radius: 25px;
+	padding: 2% 5%;
+}
+
+.aboutUsLeft{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 /*Our Doodles Section*/
 #doodles{
-	background-color: #f1b5b8;;
+	background-color: #d4cec8;
 	color: white;
 	font-family: sans-serif;
+	width: 100%;
+	max-width: 950px;
+	border-radius: 25px;
 }
 
 #doodles img{
 	width: 100%;
 	height: 100%;
-	border:  1px solid white;
 	padding: 0px;
 }
 
 #doodles p{
 	margin: 10% 0px 15% 0px;
 	line-height: 30px;
-	font-style: italic;
+	color: black;
 }
-
 
 /*Puppies Section*/
 
 .background{
-	background-color: #f7ebe9;
+	background-color: #eae6e3;
 }
 
 #puppies img{
@@ -193,27 +235,48 @@ h5{
 }
 
 .generalInfo{
-	background-color: #f1b5b8;
+	background-color: #d4cec8;
 	color: white;
 	border-radius: 25px;
+	max-width: 688px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+/*	max-height: 775px;*/
 }
 
 .generalInfo h1{
 	font-size: 36px;
-	margin: 10% 0;
+	margin: 2% 0;
+	padding: 0px;
 }
+
 .generalInfo ul{
 	padding-right: 5%;
 	text-align: left;
+	color: black;
 }
 
 .generalInfo li{
 	padding-bottom: 10%;
 }
 
+.generalInfo li:last-child{
+	padding-bottom: 0;
+}
+
+.generalInfo img{
+	align-items: center;
+	border-radius: 500px;
+	max-width: 450px;
+	padding: 5%;
+
+}
+
 /*Interest Form Section*/
 #interestForm{
-	background-color: #f1b5b8;
+	background-color: #d4cec8;
 	text-align: left;
 }
 
@@ -226,6 +289,14 @@ input, textarea{
 
 textarea{
 	min-height: 100px;
+}
+
+label{
+	color: black;
+}
+
+button{
+	background-color: white;
 }
 
 #interestForm button{
@@ -247,9 +318,14 @@ textarea{
 }
 
 footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	text-align: center;
-	padding: 2rem 2rem;
+	padding: 1rem 1rem;
 	max-height: 200px;
+	width: 100%;
+	font-size: 14px;
 }
 
 footer ul{
@@ -257,10 +333,11 @@ footer ul{
 	flex-direction: row;
 	justify-content: center;
 	padding: 0;
+	width: 100%;
 }
 
 footer ul li{
-	width: 33%;
+	width: 33.33%;
 }
 
 footer p{
@@ -302,6 +379,8 @@ footer p{
 
 .grid{
 	display: none;
+	max-height: 350px;
+	max-width: 500px;
 }
 
 
@@ -317,7 +396,6 @@ footer p{
 
 	.nav{
 		padding: 1rem .5rem;
-		font-size: 16px;
 	}
 
 	.menuBtn{
@@ -375,6 +453,22 @@ footer p{
 	.flip{
 		flex-direction: row-reverse;
 	}
+
+	footer .row{
+	width: 100%;
+	}
+
+	footer .col-3{
+		width: 25%;
+	}
+
+	footer .col-6{
+		width: 50%;
+	}
+
+	#aboutUs p{
+		margin-bottom: 2%;
+	}
 }
 
 @media only screen and (min-width: 425px){
@@ -400,6 +494,34 @@ footer p{
 	.pic3{
 		grid-area: 1 / 4 / 3 / 6;
 	}
+	#aboutUs p{
+		line-height: 30px;
+	}
+
+	h3{
+		padding: 2%;
+	}
+
+	.slideshow-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+}
+
+@media only screen and (min-width: 600px){
+
+	.generalInfo li{
+		padding-bottom: 5%;
+	}
+
+	input, textarea{
+		margin-bottom: 5%;
+	}
+
+	#doodles .ashur p{
+		margin-bottom: 0;
+	}
 
 }
 
@@ -411,6 +533,7 @@ footer p{
 		justify-content: space-between;
 		padding: 1rem .5rem;
 	}
+
 	.menuBtn{
 		display: none;
 		transition: none;
@@ -423,7 +546,7 @@ footer p{
 		padding: 0px;
 		position: initial;
 		box-shadow: none;
-		background-color: white;
+		background-color: transparent;
 		min-width: 400px;
 		justify-content: flex-end;
 	}
@@ -434,20 +557,63 @@ footer p{
 
 	.menuItem{
 		font-weight: 750;
-		font-size: 14px;
+		font-size: 12px;
 		padding: 0% 5%;
+		color: black;
 	}
+
+	.socials{
+		font-size: 1.50rem;
+	}
+
+	.generalInfo img{
+		padding-top: 0px !important;
+	}
+
+	h1{
+		margin-bottom: 5%;
+	}
+
+	#puppies, #doodles p, form{
+		max-width: 768px;
+	}
+
+
+
+	#doodles p{
+		padding: 0px 5%;
+		margin-top: 5%;
+	}
+
+}
+
+@media only screen and (min-width:  950px){
+	.slideshow-container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#doodles div p{
+		max-width: 430px;
+		padding: 0px 5%;
+	}
+
+	.ashur{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	.grid{
+		padding: 0px 2%;
+	}
+
 }
 
 @media only screen and (min-width: 1024px){
 
 	.nav{
-		font-size: 24px;
 		padding: 1rem 1rem;
-	}
-
-	.menuItem{
-		font-size: 18px;
 	}
 
 	.menuBox li{
@@ -458,6 +624,6 @@ footer p{
 	.menuBox{
 		min-width: 550px;
 	}
-
+	
 }
 

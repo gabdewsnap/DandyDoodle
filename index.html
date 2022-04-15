@@ -9,9 +9,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="assets/favicon.png">
 
 </head>
-<body>
+<body class="backgroundImg">
 	<div class="nav hamburger-nav">
 
 			<input id="menuToggle" type="checkbox" />
@@ -31,19 +32,25 @@
 	 </div>
 	
 	<section id="aboutUs">
-		<h1>About Us</h1>
+		<div class="aboutUsLeft">
 
-		<img src="assets/profilepic.jpg">
+			<img src="assets/profilepic.jpg">
 
-		<h3>Dandy Doodle Dynasty</h3>
+		</div>
+		
+		<div class="aboutUsRight">
 
-		<p>We are a typical family who loves our puppies! Macey, a mini goldendoodle, was thoughtfully chosen at a time when we needed some happiness brought into our lives. A dog that didn’t shed, was perfect. A dog that wasn’t too big, was perfect. A dog that was good with kids, was perfect. A dog that was smart and easy to train, was perfect. Macey was perfect for our family and quickly became a valued member of our household. With the addition of Ashur, and most recently, Millie (a mini Aussiedoodle), our family of fur babies has grown. Now, we just want to share the wonderful gem of a breed that we have discovered- Doodles. Because Doodles are Dandy!</p>
+			<h3>About Us</h3>
+
+			<p>We are a typical family who loves our puppies! Macey, a mini goldendoodle, was thoughtfully chosen at a time when we needed some happiness brought into our lives. A dog that didn’t shed, was perfect. A dog that wasn’t too big, was perfect. A dog that was good with kids, was perfect. A dog that was smart and easy to train, was perfect. Macey was perfect for our family and quickly became a valued member of our household. With the addition of Ashur, and most recently, Millie (a mini Aussiedoodle), our family of fur babies has grown. Now, we just want to share the wonderful gem of a breed that we have discovered- Doodles. Because Doodles are Dandy!</p>
+		</div>
+		
 	</section>
 
 	<section id="doodles">
 		<h1>Our Doodles</h1>
 
-		<div class="slideshow-container">
+		<div class="slideshow-container macey">
 			
 			
 			<div class="grid">
@@ -67,10 +74,10 @@
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-			<p>The dame is Macey. “Macey” is derived from the medieval male form of Matthew. We adopted Macey right after the loss of a very special “Matthew” in our lives. She was born in September 2017. She is a chocolate, F1b mini goldendoodle and weighs 30 pounds. Her disposition is very calm, sweet and affectionate. She loves on anyone and everyone. A guard dog, she is NOT!</p>
+			<div><p>The dame is Macey. “Macey” is derived from the medieval male form of Matthew. We adopted Macey right after the loss of a very special “Matthew” in our lives. She was born in September 2017. She is a chocolate, F1b mini goldendoodle and weighs 30 pounds. Her disposition is very calm, sweet and affectionate. She loves on anyone and everyone. A guard dog, she is NOT!</p></div>
 		</div>
 
-		<div class="slideshow-container">
+		<div class="slideshow-container ashur">
 
 			<div class="grid">
 				<div class="pic1">
@@ -92,7 +99,7 @@
 			<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides2(1)">&#10095;</a>
 
-			<p>The sire is Ashur. “Ashur” means “happiness”. We adopted Ashur in order to give Macey a companion and to hopefully have puppies one day. He was born in September 2018. He is a black, CKC registered, miniature poodle that weighs 8 pounds. His personality is somewhat protective, though no one takes his 8 little pounds very seriously. He also loves to snuggle and perch on the top of the couch, like a parrot.</p>
+			<div><p>The sire is Ashur. “Ashur” means “happiness”. We adopted Ashur in order to give Macey a companion and to hopefully have puppies one day. He was born in September 2018. He is a black, CKC registered, miniature poodle that weighs 8 pounds. His personality is somewhat protective, though no one takes his 8 little pounds very seriously. He also loves to snuggle and perch on the top of the couch, like a parrot.</p></div>
 		</div>
 	</section>
 
@@ -159,17 +166,18 @@
 				<li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Vet Wellness Certificate and One Year Health guarantee</li>
 				<li><span class="fa-li"><i class="fa-solid fa-check"></i></span>Beginning Potty Training Techniques</li>
 			</ul>
+			<img src="assets/barrelofpups1.png">
 		</div>
 	</section>
 
 	<section id="interestForm">
 		<h1>Interest Form</h1>
-		<form action="https://getform.io/f/554eaef4-2a43-4e6c-9108-bdac74734b7b" method="POST">
+		<form action="https://getform.io/f/4cda01de-9e4a-4515-91d8-afeb8b4bd4b5" method="POST">
 			<label>Name</label>
 			<input type="text" name="name" placeholder="Enter your Name" required>
 
 			<label>Email</label>
-			<input type="email" name="email" placeholder="Enter a valid email address" required>
+			<input type="chec" name="email" placeholder="Enter a valid email address" required>
 
 			<label>Do you own your own house or is it a rental?</label>
 			<input type="text" name="householdOrRental" placeholder="" required>
@@ -191,7 +199,7 @@
 	</section>
 
 	<footer>
-		<div class="container">
+		
 			<div class="row">
 				<div class="col-3">
 					<i class="fa-solid fa-paw"><span>Dandy Doodle Dynasty</span></i>
@@ -207,7 +215,7 @@
 					</ul>
 				</div>
 			</div>
-		</div>
+		
 	</footer>
 
 	<script type="text/javascript" src="main.js"></script>
